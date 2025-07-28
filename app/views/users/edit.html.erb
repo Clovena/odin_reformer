@@ -1,0 +1,12 @@
+<h1>Hello Rails</h1>
+<h2>Edit your account:</h2>
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, "Username" %>
+  <%= form.text_field :username %><br>
+  <%= form.label :email, "Email" %>
+  <%= form.text_field :email %><br>
+  <%= form.label :password, "Password" %>
+  <%= form.text_field :password %><br>
+  <%= form.submit "Create Account" %>
+<% end %>
