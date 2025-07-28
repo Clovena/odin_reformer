@@ -1,18 +1,30 @@
 <h1>Hello Rails</h1>
 <h2>Create your account:</h2>
 
-<%= form_tag("/users", method: "post") do %>
-  <%= label_tag(:username, "Username") %>
-  <%= text_field_tag(:username) %>
-
-  <%= label_tag(:email, "Email Address") %>
-  <%= text_field_tag(:email) %>
-
-  <%= label_tag(:password, "Password") %>
-  <%= text_field_tag(:password) %>
-  
-  <%= submit_tag("Create Account") %>
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, "Username" %>
+  <%= form.text_field :username %><br>
+  <%= form.label :email, "Email" %>
+  <%= form.text_field :email, placeholder: "ruby@rails.com" %><br>
+  <%= form.label :password, "Password" %>
+  <%= form.text_field :password %><br>
+  <%= form.submit "Create Account" %>
 <% end %>
+
+
+<%# <%= form_tag("/users", method: "post") do %>
+  <%# <%= label_tag(:username, "Username") %>
+  <%# <%= text_field_tag(:username) %>
+<%#  %>
+  <%# <%= label_tag(:email, "Email Address") %>
+  <%# <%= text_field_tag(:email) %>
+<%#  %>
+  <%# <%= label_tag(:password, "Password") %>
+  <%# <%= text_field_tag(:password) %>
+  <%#  %>
+  <%# <%= submit_tag("Create Account") %>
+<%# <% end %>
+
 
 <%# <form %>
   <%# action="/users" %>
@@ -23,7 +35,7 @@
   <%# <input %>
   <%# type="hidden" %>
   <%# name="authenticity_token" %>
-  <%# value="<%= form_authenticity_token %>" %>
+  <%# value="<%= form_authenticity_token %>
   <%# > %>
 <%#  %>
   <%# <label for="user[username]">Username</label> %>
