@@ -1,1 +1,18 @@
 <h1>Hello Rails</h1>
+<h2>Create your account:</h2>
+
+<form
+  action="/users/new"
+  method="get"
+  accept-charset="utf-8"
+  data-turbo=false
+>
+  <label for="user[username]">Username</label>
+  <input type="text" name="user[username]" id="user[username]"><br>
+
+  <label for="user[email]">Email Address</label>
+  <input type="email" name="user[email]" id="user[email]"><br>
+
+  <label for="user[pwd]">Password</label>
+  <input type="password" name="user[pwd]" id="user[pwd]">
+</form>
