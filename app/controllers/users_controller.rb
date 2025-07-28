@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.new(
       username: params[:username],
       email: params[:email],
-      pwd: params[:pwd]
+      password: params[:password]
     )
 
     if @user.save
