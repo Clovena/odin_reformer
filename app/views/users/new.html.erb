@@ -5,8 +5,8 @@
   <%= form.label :username, "Username" %>
   <%= form.text_field :username %><br>
   <%= form.label :email, "Email" %>
-  <%= form.text_field :email, placeholder: "ruby@rails.com" %><br>
+  <%= form.email_field :email, placeholder: "ruby@rails.com" %><br>
   <%= form.label :password, "Password" %>
-  <%= form.text_field :password %><br>
+  <%= form.password_field :password %><br>
   <%= form.submit "Create Account" %>
 <% end %>
