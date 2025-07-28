@@ -13,6 +13,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(:id)
+
+    if @user.save
+      redirect_to new_user_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def user_params
