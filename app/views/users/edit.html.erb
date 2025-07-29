@@ -2,13 +2,4 @@
 <h2>Edit your account:</h2>
 
 <%= render partial: "errors", locals: { user: @user } %>
-
-<%= form_with model: @user do |form| %>
-  <%= form.label :username, "Username" %>
-  <%= form.text_field :username %><br>
-  <%= form.label :email, "Email" %>
-  <%= form.email_field :email %><br>
-  <%= form.label :password, "Password" %>
-  <%= form.password_field :password %><br>
-  <%= form.submit "Update Account" %>
-<% end %>
+<%= render partial: "form", locals: { user: @user } %>
