@@ -1,8 +1,8 @@
 <% if user.errors.any? %>
   <div id="error-explanation">
-    <h2>
+    <h3>
       <%= pluralize(user.errors.count, "error") %> prevented save...
-    </h2>
+    </h3>
 
     <ul>
     <% user.errors.full_messages.each do |msg| %>

@@ -1,6 +1,8 @@
 <h1>Hello Rails</h1>
 <h2>Create your account:</h2>
 
+<%= render partial: "errors", locals: { user: @user } %>
+
 <%= form_with model: @user do |form| %>
   <%= form.label :username, "Username" %>
   <%= form.text_field :username %><br>
